@@ -1,6 +1,5 @@
 <?php
-require "services/Translator.php";
-require "controllers/AbstractController.php";
-require "controllers/AuthController.php";
+require "controllers/CategoryController.php";
+require "controllers/PostsController.php";
 require "services/Router.php";
 
