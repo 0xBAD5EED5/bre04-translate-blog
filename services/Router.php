@@ -15,7 +15,7 @@ class Router
         {
             $this->pc->posts();
         }
-        else if(isset($get["route"]) && $get["route"] === "catégories")
+        else if(isset($get["route"]) && $get["route"] === "categorys")
         {
             $this->cc->category();
         }

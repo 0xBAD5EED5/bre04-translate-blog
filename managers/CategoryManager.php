@@ -9,12 +9,12 @@ class CategoryManager extends AbstractManager
     
     public function findAll(): array
 	{
-    	$stmt = $this->db->query("SELECT * FROM posts");
+    	$stmt = $this->db->query("SELECT * FROM categories");
     	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     	$categorys = [];
 
     	foreach ($rows as $row) {
-        	$category = new Post(
+        	$category = new Category(
             	$row['title_fr'],
             	$row['description_fr'],
         	);

@@ -1,10 +1,9 @@
 <?php
-class CategoryController
-{
-    public function __construct() {}
-    
-    public function category() : void {
-		$route = "catégories";
-		require 'templates/layout.phtml';
-	}
+
+class CategoryController {
+    public function category() {
+        $categoryManager = new CategoryManager();
+        $categorys = $categoryManager->findAll();
+        require __DIR__ . '/../templates/categorys.phtml';
+    }
 }

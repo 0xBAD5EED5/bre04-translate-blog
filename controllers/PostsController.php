@@ -1,10 +1,9 @@
 <?php
-class PostsController
-{
-    public function __construct() {}
-    
-    public function posts() : void {
-		$route = "posts";
-		require 'templates/layout.phtml';
-	}
+
+class PostsController {
+    public function posts() {
+        $postManager = new PostManager();
+        $posts = $postManager->findAll();
+        require __DIR__ . '/../templates/posts.phtml';
+    }
 }
