@@ -5,10 +5,8 @@ class Post
     private ?int $id = null;
 
     public function __construct(
-        private string $title_en,
-        private string $excerpt_en,
-        private string $title_fr,
-        private string $excerpt_fr,
+        private string $title,
+        private string $excerpt,
         private Category $category,
     ) {}
 
@@ -22,44 +20,24 @@ class Post
         $this->id = $id;
     }
 
-    // Title_en
-    public function getTitle_en(): string
+    // Title
+    public function getTitle(): string
     {
-        return $this->title_en;
+        return $this->title;
     }
-    public function setTitle_en(string $title_en): void
+    public function setTitle(string $title): void
     {
-        $this->title_en = $title_en;
-    }
-
-    // Excerpt_en
-    public function getExcerpt_en(): string
-    {
-        return $this->excerpt_en;
-    }
-    public function setExcerpt_en(string $excerpt_en): void
-    {
-        $this->excerpt_en = $excerpt_en;
+        $this->title = $title;
     }
 
-    // Title_fr
-    public function getTitle_fr(): string
+    // Excerpt
+    public function getExcerpt(): string
     {
-        return $this->title_fr;
+        return $this->excerpt;
     }
-    public function setTitle_fr(string $title_fr): void
+    public function setExcerpt(string $excerpt): void
     {
-        $this->title_fr = $title_fr;
-    }
-    
-    // Excerpt_fr
-    public function getExcerpt_fr(): string
-    {
-        return $this->excerpt_fr;
-    }
-    public function setExcerpt_fr(string $excerpt_fr): void
-    {
-        $this->excerpt_fr = $excerpt_fr;
+        $this->excerpt = $excerpt;
     }
    
 	// Category
