@@ -16,8 +16,6 @@ class PostManager extends AbstractManager
 
     	foreach ($rows as $row) {
         	$post = new Post(
-            	$row['title_en'],
-            	$row['excerpt_en'],
             	$row['title_fr'],
             	$row['excerpt_fr'],
             	$row['category'],

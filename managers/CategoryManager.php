@@ -15,8 +15,6 @@ class CategoryManager extends AbstractManager
 
     	foreach ($rows as $row) {
         	$category = new Post(
-            	$row['title_en'],
-            	$row['description_en'],
             	$row['title_fr'],
             	$row['description_fr'],
         	);
